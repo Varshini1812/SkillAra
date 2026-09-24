@@ -6,8 +6,8 @@ Quick reference for which local folder maps to which GitHub repository.
 |--------------|-------------------|---------|
 | *(this root, docs only)* | [Varshini1812/SkillAra](https://github.com/Varshini1812/SkillAra) | Platform overview & resume hub |
 | `SkillAra_server/` | [Mohankumar-21/SkillAra_server](https://github.com/Mohankumar-21/SkillAra_server) | Backend API |
-| `SkillAra_adminpanel/` | [Varshini1812/SkillAra_admin](https://github.com/Varshini1812/SkillAra_admin) | Platform super-admin UI |
-| `SkillAra_client/` | [Varshini1812/SkillAra_tenantUI](https://github.com/Varshini1812/SkillAra_tenantUI) | Tenant UI (students + org admin) |
+| `SkillAra_admin/` | [Varshini1812/SkillAra_admin](https://github.com/Varshini1812/SkillAra_admin) | Platform super-admin UI |
+| `SkillAra_tenantUI/` | [Varshini1812/SkillAra_tenantUI](https://github.com/Varshini1812/SkillAra_tenantUI) | Tenant UI (students + org admin) |
 
 ## Initializing the umbrella repo (GitHub: SkillAra)
 
@@ -42,7 +42,7 @@ git remote set-url origin https://github.com/Mohankumar-21/SkillAra_server.git
 ## Pushing platform admin changes
 
 ```bash
-cd SkillAra_adminpanel
+cd SkillAra_admin
 git remote -v   # should point to Varshini1812/SkillAra_admin
 git add .
 git commit -m "Describe your changes"
@@ -55,10 +55,10 @@ If the remote is wrong:
 git remote set-url origin https://github.com/Varshini1812/SkillAra_admin.git
 ```
 
-## Pushing tenant UI (client) changes
+## Pushing tenant UI changes
 
 ```bash
-cd SkillAra_client
+cd SkillAra_tenantUI
 git remote -v   # should point to Varshini1812/SkillAra_tenantUI
 git add .
 git commit -m "Describe your changes"
