@@ -138,8 +138,8 @@ flowchart TB
 
 1. Clone **SkillAra_server**, **SkillAra_admin**, and **SkillAra_tenantUI** (or use this monorepo layout locally).
 2. Start API: `cd SkillAra_server && npm install && cp .env.example .env && npm run dev`
-3. Start platform admin: `cd SkillAra_adminpanel && npm install && npm run dev` → `http://localhost:5174`
-4. Start tenant UI: `cd SkillAra_client && npm install && npm run dev` → `http://localhost:5173`
+3. Start platform admin: `cd SkillAra_admin && npm install && npm run dev` → `http://localhost:5174`
+4. Start tenant UI: `cd SkillAra_tenantUI && npm install && npm run dev` → `http://localhost:5173`
 5. Create an organization from platform admin, then log in at `http://{subdomain}.localhost:5173/admin`
 
 Detailed setup: see each repository’s README and [docs/DEVELOPMENT.md](./docs/DEVELOPMENT.md).
@@ -151,13 +151,13 @@ Detailed setup: see each repository’s README and [docs/DEVELOPMENT.md](./docs/
 If you pushed code but **SkillAra_tenantUI** did not update, common causes:
 
 1. **Wrong remote** — tenant UI code must push to `SkillAra_tenantUI`, not the umbrella `SkillAra` repo.
-2. **Wrong folder** — `SkillAra_client` locally → remote **SkillAra_tenantUI**; `SkillAra_adminpanel` → **SkillAra_admin**; `SkillAra_server` → **Mohankumar-21/SkillAra_server**.
+2. **Wrong folder** — `SkillAra_tenantUI` locally → remote **SkillAra_tenantUI**; `SkillAra_admin` → **SkillAra_admin**; `SkillAra_server` → **Mohankumar-21/SkillAra_server**.
 3. **Uncommitted files** — run `git status` and commit before push.
 4. **Wrong branch** — push to `main` (or the branch GitHub displays as default).
 
 ```bash
-# Example: push tenant UI (from your client folder)
-cd SkillAra_client
+# Example: push tenant UI (from your tenant UI folder)
+cd SkillAra_tenantUI
 git remote -v                    # should point to SkillAra_tenantUI
 git add .
 git commit -m "Your message"
